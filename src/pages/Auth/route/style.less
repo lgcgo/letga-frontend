@@ -1,0 +1,58 @@
+.authPageContainer {
+  .authRoleCard {
+    min-height: 348px;
+  }
+
+  .authMenuCard {
+    height: 100%;
+
+    :global {
+      .ant-pro-card-body {
+        &>.ant-table-wrapper {
+          height: 348px;
+          overflow-y: auto;
+
+          .ant-table {
+            background-color: #fafafa;
+            border-radius: 0;
+
+            .ant-table-tbody>tr {
+              &:hover {
+                background-color: #f4f4f4;
+              }
+
+              &>td>.menuTableOption {
+                visibility: hidden;
+              }
+
+              &:hover>td>.menuTableOption {
+                visibility: visible;
+              }
+
+              &>td {
+                background-color: rgba(0, 0, 0, 0.0);
+                border-bottom: solid #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /** 左侧筛选样式 */
+  .fliterSider {
+    :global {
+      .ant-pro-card {
+        &>.ant-pro-card-header {
+          // padding-block-end: 8px;
+
+          &>.ant-pro-card-title {
+            font-size: 14px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

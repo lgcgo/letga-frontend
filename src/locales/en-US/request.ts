@@ -1,0 +1,15 @@
+export default {
+    'request.waiting': 'Waiting',
+    'request.success': 'Successful operation',
+    'request.fail': 'Fail operation',
+    'request.signin.success': 'Signin successfully',
+    'request.signin.fail': 'Signin failed',
+    'request.create.success': 'Create successfully',
+    'request.create.fail': 'Create failed',
+    'request.update.success': 'Update successfully',
+    'request.update.fail': 'Update failed',
+    'request.setup.success': 'Setup successfully',
+    'request.setup.fail': 'Setup failed',
+    'request.delete.success': 'Deleted successfully',
+    'request.delete.fail': 'Delete failed, please try again',
+}

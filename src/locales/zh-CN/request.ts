@@ -1,0 +1,15 @@
+export default {
+    'request.waiting': '等待响应',
+    'request.success': '操作成功',
+    'request.fail': '操作失败',
+    'request.signin.success': '登录成功',
+    'request.signin.fail': '登录失败',
+    'request.create.success': '新建成功',
+    'request.create.fail': '新建失败',
+    'request.update.success': '修改成功',
+    'request.update.fail': '修改失败',
+    'request.setup.success': '设置成功',
+    'request.setup.fail': '设置失败',
+    'request.delete.success': '删除成功',
+    'request.delete.fail': '删除失败，请重试',
+}

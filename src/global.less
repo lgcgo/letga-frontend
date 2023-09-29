@@ -1,0 +1,205 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ant-page-header {
+  padding-block: 0;
+  & > .ant-page-header-heading {
+    & > .ant-page-header-heading-left {
+      & > .ant-page-header-heading-title {
+        margin-block-end: 4px;
+      }
+      flex-direction: column;
+      align-items: flex-start;
+      margin-block-start: 0;
+    }
+  }
+}
+
+/** 禁用蒙层 */
+.disabled-area {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor:not-allowed;
+    z-index: 9;
+  }
+}
+
+/** 自定义表格样式 */
+.customProTable,
+.customProTable754,
+.customProTable787 {
+  :global {
+    .ant-pro-card {
+      &:last-child {
+        background-color: rgba(0, 0, 0, 0);
+      }
+      &>.ant-pro-card-body {
+        padding-inline: 0;
+        // &>.ant-pro-table-list-toolbar {
+        //   &>.ant-pro-table-list-toolbar-container {
+        //     &>.ant-pro-table-list-toolbar-left {
+        //       &>.ant-pro-table-list-toolbar-title {
+        //         font-weight: 700;
+        //       }
+        //     }
+        //   }
+        // }
+
+        &>.ant-table-wrapper {
+          &>.ant-spin-nested-loading {
+            &>.ant-spin-container {
+              &>.ant-table {
+                border-radius: 8px;
+                overflow: hidden;
+
+                &>.ant-table-container {
+                  &>.ant-table-content {
+                    &>table {
+                      &>colgroup {
+                        &>col.ant-table-selection-col {
+                          width: 48px;
+                        }
+                      }
+
+                      &>thead.ant-table-thead {
+                        &>tr {
+                          &>th.ant-table-cell {
+                            padding: 16px 8px;
+
+                            &:first-child {
+                              padding-left: 24px;
+                            }
+
+                            &:last-child {
+                              padding-right: 24px;
+                            }
+                          }
+                        }
+                      }
+
+                      &>tbody.ant-table-tbody {
+                        &>tr.ant-table-placeholder {
+                          &>td.ant-table-cell {
+                            &:last-child {
+                              border-bottom: none;
+                              &>.ant-table-expanded-row-fixed {
+                                &>.ant-empty-normal {
+                                  margin-top: 180px;
+                                  margin-bottom: 0;
+                                }
+                              }
+                            }
+                          }
+                        }
+
+                        &>tr.ant-table-row {
+                          &:last-child {
+                            &>td.ant-table-cell {
+                              border-bottom: none;
+                            }
+                          }
+                          &>td.ant-table-cell {
+                            &:first-child {
+                              padding-left: 24px;
+                            }
+
+                            &>.ant-image {
+                              margin-top: -7px;
+                              margin-bottom: -7px;
+                            }
+                            &>.ant-tag {
+                              margin-top: -7px;
+                              margin-bottom: -7px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &>.ant-pagination {
+                &>.ant-pagination-item-active {
+                  background-color: rgba(0, 0, 0, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.customProTable787 {
+  :global {
+    .ant-table {
+      min-height: 787.17px;
+    }
+  }
+}
+.customProTable754 {
+  :global {
+    .ant-table {
+      min-height: 754px;
+    }
+  }
+}

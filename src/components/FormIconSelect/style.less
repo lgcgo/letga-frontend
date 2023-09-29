@@ -1,0 +1,208 @@
+
+.iconSelect {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    position: relative;
+
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    & > .iconSelectSelector {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1px 4px;
+        border-radius: 6px;
+        padding-inline-end: 24px;
+
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid #d9d9d9;
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        box-sizing: border-box;
+
+        & > .iconSelectSelectionOverflow {
+            position: relative;
+            display: flex;
+            flex: auto;
+            flex-wrap: wrap;
+            max-width: 100%;
+            box-sizing: border-box;
+
+            & > .iconSelectSelectionOverflowItem {
+                flex: none;
+                align-self: center;
+                max-width: 100%;
+                display: inline-flex;
+                box-sizing: border-box;
+                & > .iconSelectSelectionItem {
+                    position: relative;
+                    display: flex;
+                    flex: none;
+                    box-sizing: border-box;
+                    max-width: 100%;
+                    height: 24px;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                    line-height: 22px;
+                    background: rgba(0, 0, 0, 0.06);
+                    border-radius: 4px;
+                    cursor: default;
+
+                    transition: font-size 0.3s,line-height 0.3s,height 0.3s;
+                    user-select: none;
+                    margin-inline-end: 4px;
+                    padding-inline-start: 8px;
+                    padding-inline-end: 4px;
+
+                    font-weight: normal;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    & > * {
+                        line-height: inherit;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    & > .iconSelectSelectionItemContent {
+                        display: inline-block;
+                        margin-inline-end: 4px;
+                        overflow: hidden;
+                        white-space: pre;
+                        text-overflow: ellipsis;
+                    }
+                    & > .iconSelectSelectionItemRemove {
+                        display: inline-block;
+                        align-items: center;
+                        color: rgba(0, 0, 0, 0.45);
+                        font-style: normal;
+                        line-height: inherit;
+                        text-align: center;
+                        text-transform: none;
+                        vertical-align: -0.125em;
+                        text-rendering: optimizeLegibility;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-weight: bold;
+                        font-size: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        & > .iconSelectSelectionPlaceholder {
+            position: absolute;
+            top: 50%;
+            inset-inline-start: 11px;
+            inset-inline-end: 11px;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex: 1;
+            color: rgba(0, 0, 0, 0.25);
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+        &:after{
+            display: inline-block;
+            width: 0;
+            margin: 2px 0;
+            line-height: 24px;
+            content: "\a0";
+        }
+    }
+    & > .iconSelectImport {
+        display: flex;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.25);
+        font-style: normal;
+        line-height: 1;
+        text-align: center;
+        text-transform: none;
+        vertical-align: -0.125em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top: 50%;
+        inset-inline-start: auto;
+        inset-inline-end: 11px;
+        height: 12px;
+        margin-top: -6px;
+        font-size: 12px;
+        pointer-events: none;
+    }
+}
+
+.iconContentWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    height: 440px;
+    overflow-y: auto;
+    & > div {
+        width: 16.66%;
+        height: 96px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        box-sizing: border-box;
+        & > div {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            padding: 2px;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:hover {
+                color: #ffffff;
+                background-color: #1677ff;
+                border: 1px solid #1677ff;
+                & > div {
+                    :global {
+                        .anticon {
+                            transform: scale(1.4);
+                        }
+                        .ant-typography {
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                :global {
+                    .anticon {
+                        margin-bottom: 8px;
+                        transition: transform 0.15s ease-in-out;
+                        will-change: transform;
+                        font-size: 24px;
+                    }
+                    .ant-typography {
+                        margin-bottom: -16px;
+                    }
+                }
+            }
+        }
+    }
+}
